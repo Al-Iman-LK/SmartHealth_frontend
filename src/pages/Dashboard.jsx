@@ -13,11 +13,14 @@ import {
   ArrowRight,
   Thermometer,
   Weight,
-  Zap
+  Zap,
+  FileText
 } from 'lucide-react';
 import './Dashboard.css';
 
 const Dashboard = ({ user }) => {
+  console.log('Dashboard component rendering with user:', user);
+  
   const [currentTime, setCurrentTime] = useState(new Date());
   const [quickStats, setQuickStats] = useState({
     totalAppointments: 12,

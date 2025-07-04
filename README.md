@@ -2,6 +2,9 @@
 
 A modern healthcare management platform built with React and Vite. Features include patient registration, appointment scheduling, telemedicine consultations, medical records management, prescription tracking, and secure doctor-patient communication. Designed with a professional UI/UX inspired by modern healthcare applications.
 
+## 🌐 Live Demo
+https://al-iman-lk.github.io/SmartHealth_frontend/
+
 ## Tech Stack
 React 18, Vite, React Router, Lucide Icons, CSS3
 

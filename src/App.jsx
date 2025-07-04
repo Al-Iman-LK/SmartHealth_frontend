@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import Dashboard from './pages/Dashboard-test';
+import Dashboard from './pages/Dashboard';
 import PatientProfile from './pages/PatientProfile';
 import Appointments from './pages/Appointments';
 import Telemedicine from './pages/Telemedicine';
@@ -30,12 +30,12 @@ function App() {
     console.log('Saved auth:', savedAuth);
     console.log('Saved user:', savedUser);
     
+    // Restore authentication from localStorage
     if (savedAuth === 'true' && savedUser) {
       setIsAuthenticated(true);
       setCurrentUser(JSON.parse(savedUser));
       console.log('Authentication restored from localStorage');
     }
-    // Remove auto-login for debugging
   }, []);
 
   const handleLogin = (userData) => {
