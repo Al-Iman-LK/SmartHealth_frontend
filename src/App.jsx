@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
@@ -60,7 +60,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename={process.env.NODE_ENV === 'production' ? '/SmartHealth_frontend' : ''}>
       <div className="App">
         <Routes>
           {/* Public Routes */}
