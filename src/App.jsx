@@ -30,12 +30,12 @@ function App() {
     console.log('Saved auth:', savedAuth);
     console.log('Saved user:', savedUser);
     
-    // Restore authentication from localStorage
     if (savedAuth === 'true' && savedUser) {
       setIsAuthenticated(true);
       setCurrentUser(JSON.parse(savedUser));
       console.log('Authentication restored from localStorage');
     }
+    // Remove auto-login for debugging
   }, []);
 
   const handleLogin = (userData) => {
@@ -60,7 +60,7 @@ function App() {
   };
 
   return (
-    <Router basename={process.env.NODE_ENV === 'production' ? '/SmartHealth_frontend' : ''}>
+    <Router>
       <div className="App">
         <Routes>
           {/* Public Routes */}
